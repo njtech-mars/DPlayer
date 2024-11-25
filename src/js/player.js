@@ -11,6 +11,7 @@ import FullScreen from './fullscreen';
 import User from './user';
 import Subtitle from './subtitle';
 import Subtitles from './subtitles';
+import Audios from './audios';
 import Bar from './bar';
 import Timer from './timer';
 import Bezel from './bezel';
@@ -566,6 +567,10 @@ class DPlayer {
             if (!this.user.get('subtitle')) {
                 this.subtitle.hide();
             }
+        }
+        console.log(this.template);
+        if (this.options.audio) {
+            this.audios = new Audios(this);
         }
     }
 

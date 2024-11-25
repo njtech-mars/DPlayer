@@ -60,21 +60,19 @@ function initPlayers() {
         preload: 'none',
         screenshot: true,
         video: {
-            url: 'https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4',
+            url: 'https://data2online.njtech.edu.cn/media/movie/动画电影/2023/你想活出怎样的人生 (2023)/你想活出怎样的人生 (2023) - 1080p - WEB-DL - H264 - DDP 5.1 Atmos.mkv',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
             thumbnails: 'https://i.loli.net/2019/06/06/5cf8c5d9cec8510758.jpg'
         },
         subtitle: {
             url: [
                 {
-                    url: 'https://s-sh-17-dplayercdn.oss.dogecdn.com/hikarunara.vtt',
-                    lang: 'zh-cn',
-                    name: '光',
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_3.vtt',
+                    name: 'eng',
                 },
                 {
-                    url: 'https://gist.githubusercontent.com/samdutton/ca37f3adaf4e23679957b8083e061177/raw/e19399fbccbc069a2af4266e5120ae6bad62699a/sample.vtt',
-                    lang: 'en-us',
-                    name: 'github',
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_4.vtt',
+                    name: 'eng(forced)',
                 },
             ],
             defaultSubtitle: 7,
@@ -82,6 +80,18 @@ function initPlayers() {
             fontSize: '25px',
             bottom: '10%',
             color: '#b7daff'
+        },
+        audio: {
+            url: [
+                {
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_1.aac',
+                    name: 'English',
+                },
+                {
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_2.aac',
+                    name: 'Japanese',
+                },
+            ],
         },
         danmaku: {
             id: '9E2E3368B56CDBB4',
@@ -157,7 +167,7 @@ function initPlayers() {
     const eventsEle = document.getElementById('events');
     for (let i = 0; i < events.length; i++) {
         dp2.on(events[i], (info) => {
-            eventsEle.innerHTML += `<p>Event: ${events[i]} ${info?`Data: <span>${JSON.stringify(info)}</span>`:''}</p>`;
+            eventsEle.innerHTML += `<p>Event: ${events[i]} ${info ? `Data: <span>${JSON.stringify(info)}</span>` : ''}</p>`;
             eventsEle.scrollTop = eventsEle.scrollHeight;
         });
     }

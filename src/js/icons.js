@@ -14,6 +14,7 @@ import pallette from '../assets/pallette.svg';
 import camera from '../assets/camera.svg';
 import airplay from '../assets/airplay.svg';
 import subtitle from '../assets/subtitle.svg';
+import audio from '../assets/audio.svg';
 import loading from '../assets/loading.svg';
 import chromecast from '../assets/chromecast.svg';
 
@@ -33,6 +34,7 @@ const Icons = {
     pallette: pallette,
     camera: camera,
     subtitle: subtitle,
+    audio: audio,
     loading: loading,
     airplay: airplay,
     chromecast: chromecast,
