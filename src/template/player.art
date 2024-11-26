@@ -155,10 +155,10 @@
             <div class="dplayer-audios-box">
                 <div class="dplayer-audios-panel">
                     {{ each options.audio.tracks }}
-                        <div class="dplayer-audios-item" data-audio="{{ $value.url }}">
+                        <button class="dplayer-audios-item" data-audio="{{ $value.url }}">
                             <!-- if lang, show tran(lang). if lang and name, show name + (tran(lang)). if name, show name. off option use lang for translation. -->
                             <span class="dplayer-label">{{ $value.name }}</span>
-                        </div>
+                        </button>
                     {{ /each }}
                 </div>
             </div>
