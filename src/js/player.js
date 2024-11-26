@@ -65,37 +65,48 @@ class DPlayer {
 
         // multi subtitles defaultSubtitle add index, off option
         if (this.options.subtitle) {
-            if (Array.isArray(this.options.subtitle.url)) {
+            if (Array.isArray(this.options.subtitle.tracks)) {
                 const offSubtitle = {
-                    subtitle: '',
-                    lang: 'off',
+                    url: '',
+                    name: this.tran('off'),
                 };
-                this.options.subtitle.url.push(offSubtitle);
+                this.options.subtitle.tracks.push(offSubtitle);
                 if (this.options.subtitle.defaultSubtitle) {
                     if (typeof this.options.subtitle.defaultSubtitle === 'string') {
-                        // defaultSubtitle is string, match in lang then name.
-                        this.options.subtitle.index = this.options.subtitle.url.findIndex((sub) =>
-                            /* if (sub.lang === this.options.subtitle.defaultSubtitle) {
-                            return true;
-                        } else if (sub.name === this.options.subtitle.defaultSubtitle) {
-                            return true;
-                        } else {
-                            return false;
-                        } */
-                            sub.lang === this.options.subtitle.defaultSubtitle ? true : sub.name === this.options.subtitle.defaultSubtitle ? true : false
-                        );
+                        // defaultSubtitle is string, match name
+                        this.options.subtitle.index = this.options.subtitle.tracks.findIndex((sub) => sub.name === this.options.subtitle.defaultSubtitle);
                     } else if (typeof this.options.subtitle.defaultSubtitle === 'number') {
                         // defaultSubtitle is int, directly use for index
                         this.options.subtitle.index = this.options.subtitle.defaultSubtitle;
                     }
                 }
-                // defaultSubtitle not match or not exist or index bound(when defaultSubtitle is int), try browser language.
-                if (this.options.subtitle.index === -1 || !this.options.subtitle.index || this.options.subtitle.index > this.options.subtitle.url.length - 1) {
-                    this.options.subtitle.index = this.options.subtitle.url.findIndex((sub) => sub.lang === this.options.lang);
-                }
-                // browser language not match, default off title
-                if (this.options.subtitle.index === -1) {
-                    this.options.subtitle.index = this.options.subtitle.url.length - 1;
+                // // defaultSubtitle not match or not exist or index bound(when defaultSubtitle is int), try browser language.
+                // if (this.options.subtitle.index === -1 || !this.options.subtitle.index || this.options.subtitle.index > this.options.subtitle.tracks.length - 1) {
+                //     this.options.subtitle.index = this.options.subtitle.tracks.findIndex((sub) => sub.lang === this.options.lang);
+                // }
+                // // browser language not match, default off title
+                // if (this.options.subtitle.index === -1) {
+                //     this.options.subtitle.index = this.options.subtitle.tracks.length - 1;
+                // }
+            }
+        }
+
+        // audio tracks
+        if (this.options.audio) {
+            if (Array.isArray(this.options.audio.tracks)) {
+                const audioFromVideo = {
+                    url: '',
+                    name: this.tran('from-video'),
+                };
+                this.options.audio.tracks.push(audioFromVideo);
+                if (this.options.audio.defaultAudio) {
+                    if (typeof this.options.audio.defaultAudio === 'string') {
+                        // defaultAudio is string, match name
+                        this.options.audio.index = this.options.audio.tracks.findIndex((sub) => sub.name === this.options.audio.defaultAudio);
+                    } else if (typeof this.options.audio.defaultAudio === 'number') {
+                        // defaultAudio is int, directly use for index
+                        this.options.audio.index = this.options.audio.defaultAudio;
+                    }
                 }
             }
         }
@@ -299,10 +310,14 @@ class DPlayer {
             if (!nonotice) {
                 this.notice(`${this.tran('volume')} ${(percentage * 100).toFixed(0)}%`, undefined, undefined, 'volume');
             }
-
-            this.video.volume = percentage;
-            if (this.video.muted) {
-                this.video.muted = false;
+            // if audio tracks exist, should be taken over by audios
+            if (this.audios) {
+                this.audios.setVolume(percentage);
+            } else {
+                this.video.volume = percentage;
+                if (this.video.muted) {
+                    this.video.muted = false;
+                }
             }
             this.switchVolumeIcon();
         }
@@ -561,14 +576,13 @@ class DPlayer {
             // init old single subtitle function(sub show and style)
             this.subtitle = new Subtitle(this.template.subtitle, this.video, this.options.subtitle, this.events);
             // init multi subtitles function(sub update)
-            if (Array.isArray(this.options.subtitle.url)) {
+            if (Array.isArray(this.options.subtitle.tracks)) {
                 this.subtitles = new Subtitles(this);
             }
             if (!this.user.get('subtitle')) {
                 this.subtitle.hide();
             }
         }
-        console.log(this.template);
         if (this.options.audio) {
             this.audios = new Audios(this);
         }
@@ -588,6 +602,7 @@ class DPlayer {
 
         const paused = this.video.paused;
         this.video.pause();
+        console.log('🚀 ~ DPlayer ~ switchQuality ~ subtitle:', subtitle);
         const videoHTML = tplVideo({
             current: false,
             pic: null,

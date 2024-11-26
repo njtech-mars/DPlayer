@@ -17,6 +17,13 @@
     <source src="{{ url }}">
     {{ /if}}
     {{ if enableSubtitle }}
-    <track class="dplayer-subtrack" kind="metadata" default src="{{ typeof subtitle.url === 'string' ? subtitle.url : subtitle.url[subtitle.index].url }}"></track>
+    <track class="dplayer-subtrack" kind="metadata" default src="{{ subtitle.tracks[subtitle.index] && subtitle.tracks[subtitle.index].url }}"></track>
     {{ /if }}
 </video>
+{{ if audio}}
+{{ each audio.tracks}}
+{{ if $value.url }}
+<audio class="dplayer-invisible-audio-track-player" src={{ $value.url }} data-index={{ $index }} ></audio>
+{{ /if }}
+{{ /each }}
+{{ /if }}

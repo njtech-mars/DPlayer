@@ -25,12 +25,6 @@ class Controller {
         this.initFullButton();
         this.initQualityButton();
         this.initScreenshotButton();
-        // if subtitle url not array, not init old single subtitle button
-        if (this.player.options.subtitle) {
-            if (typeof this.player.options.subtitle.url === 'string') {
-                this.initSubtitleButton();
-            }
-        }
         this.initHighlights();
         this.initAirplayButton();
         this.initChromecastButton();

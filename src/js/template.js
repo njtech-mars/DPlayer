@@ -27,6 +27,7 @@ class Template {
                 preload: this.options.preload,
                 url: this.options.video.url,
                 subtitle: this.options.subtitle,
+                audio: this.options.audio,
             },
         });
 
@@ -107,6 +108,7 @@ class Template {
         this.infoDanmakuId = this.container.querySelector('.dplayer-info-panel-item-danmaku-id .dplayer-info-panel-item-data');
         this.infoDanmakuApi = this.container.querySelector('.dplayer-info-panel-item-danmaku-api .dplayer-info-panel-item-data');
         this.infoDanmakuAmount = this.container.querySelector('.dplayer-info-panel-item-danmaku-amount .dplayer-info-panel-item-data');
+        this.audioElements = Array.from(this.container.querySelectorAll('.dplayer-invisible-audio-track-player'));
     }
 
     static NewNotice(text, opacity, id) {
