@@ -80,6 +80,10 @@ class DPlayer {
                         this.options.subtitle.index = this.options.subtitle.defaultSubtitle;
                     }
                 }
+                // defaultSubtitle not match or not exist or index bound(when defaultSubtitle is int), use first
+                if (this.options.subtitle.index === -1 || !this.options.subtitle.index || this.options.subtitle.index > this.options.subtitle.tracks.length - 1) {
+                    this.options.subtitle.index = 0;
+                }
                 // // defaultSubtitle not match or not exist or index bound(when defaultSubtitle is int), try browser language.
                 // if (this.options.subtitle.index === -1 || !this.options.subtitle.index || this.options.subtitle.index > this.options.subtitle.tracks.length - 1) {
                 //     this.options.subtitle.index = this.options.subtitle.tracks.findIndex((sub) => sub.lang === this.options.lang);
@@ -102,7 +106,7 @@ class DPlayer {
                 if (this.options.audio.defaultAudio) {
                     if (typeof this.options.audio.defaultAudio === 'string') {
                         // defaultAudio is string, match name
-                        this.options.audio.index = this.options.audio.tracks.findIndex((sub) => sub.name === this.options.audio.defaultAudio);
+                        this.options.audio.index = this.options.audio.tracks.findIndex((aud) => aud.name === this.options.audio.defaultAudio);
                     } else if (typeof this.options.audio.defaultAudio === 'number') {
                         // defaultAudio is int, directly use for index
                         this.options.audio.index = this.options.audio.defaultAudio;
@@ -602,7 +606,6 @@ class DPlayer {
 
         const paused = this.video.paused;
         this.video.pause();
-        console.log('🚀 ~ DPlayer ~ switchQuality ~ subtitle:', subtitle);
         const videoHTML = tplVideo({
             current: false,
             pic: null,

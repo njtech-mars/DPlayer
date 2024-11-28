@@ -4,7 +4,6 @@ class Audios {
     /**@param {{video:HTMLVideoElement}} player  */
     constructor(player) {
         this.player = player;
-        console.log('🚀 ~ Audios ~ constructor ~ player:', player);
         this.player.template.mask.addEventListener('click', () => {
             this.hide();
         });
@@ -19,9 +18,7 @@ class Audios {
             if (currentAudio) {
                 const diff = currentAudio.currentTime - this.player.video.currentTime;
 
-                // console.log("🚀 ~ Audios ~ this.player.video.addEventListener ~ diff:", diff)
                 if (Math.abs(diff) > 0.3) {
-                    // console.log("🚀 RECONCILING TIME")
                     currentAudio.currentTime = this.player.video.currentTime;
                 }
             }
@@ -58,7 +55,6 @@ class Audios {
                     // stop all other audio playing
                     this.player.template.audioElements.forEach(async (audio, j) => {
                         if (j !== i) {
-                            console.log('🚀 pausing', audio);
                             await audio.pause();
                         }
                     });
@@ -121,7 +117,6 @@ class Audios {
 
     async sync_current_from_video() {
         const currentAudio = this.player.template.audioElements[this.player.options.audio.index];
-        console.log('🚀 ~ Audios ~ sync_current_from_video ~ currentAudio:', currentAudio);
         if (currentAudio) {
             // time
             currentAudio.currentTime = this.player.video.currentTime;

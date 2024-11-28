@@ -3,9 +3,9 @@
 // stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
 // document.body.appendChild(stats.dom);
 function animate() {
-    stats.begin();
+    // stats.begin();
     // monitored code goes here
-    stats.end();
+    // stats.end();
 
     requestAnimationFrame(animate);
 }
@@ -42,22 +42,19 @@ function initPlayers() {
         preload: 'none',
         screenshot: true,
         video: {
-            url: 'https://data2online.njtech.edu.cn/media/movie/动画电影/2023/你想活出怎样的人生 (2023)/你想活出怎样的人生 (2023) - 1080p - WEB-DL - H264 - DDP 5.1 Atmos.mkv',
-            pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
-            thumbnails: 'https://i.loli.net/2019/06/06/5cf8c5d9cec8510758.jpg'
+            url: 'https://data2online.njtech.edu.cn/media/anime/动漫/星灵感应 (2023)/Season 1/星灵感应 - S01E07 - 1080p - BDRIP - X265 - FLAC.mkv',
         },
         subtitle: {
             tracks: [
                 {
-                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_3.vtt',
-                    name: 'eng',
+                    url: 'https://data2online.njtech.edu.cn/media/anime/%E5%8A%A8%E6%BC%AB/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20(2023)/Season%201/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20-%20S01E07%20-%201080p%20-%20BDRIP%20-%20X265%20-%20FLAC_extracted_subtitle_from_stream_2.vtt',
+                    name: 'CHS',
                 },
                 {
-                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_4.vtt',
-                    name: 'eng(forced)',
+                    url: 'https://data2online.njtech.edu.cn/media/anime/%E5%8A%A8%E6%BC%AB/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20(2023)/Season%201/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20-%20S01E07%20-%201080p%20-%20BDRIP%20-%20X265%20-%20FLAC_extracted_subtitle_from_stream_3.vtt',
+                    name: 'CHT',
                 },
             ],
-            defaultSubtitle: 7,
             type: 'webvtt',
             fontSize: '25px',
             bottom: '10%',
@@ -75,11 +72,44 @@ function initPlayers() {
                 },
             ],
         },
-        danmaku: {
-            id: '9E2E3368B56CDBB4',
-            api: 'https://api.prprpr.me/dplayer/',
-            addition: ['https://s-sh-17-dplayercdn.oss.dogecdn.com/1678963.json']
-        }
+        // video: {
+        //     url: 'https://data2online.njtech.edu.cn/media/movie/动画电影/2023/你想活出怎样的人生 (2023)/你想活出怎样的人生 (2023) - 1080p - WEB-DL - H264 - DDP 5.1 Atmos.mkv',
+        //     pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
+        //     thumbnails: 'https://i.loli.net/2019/06/06/5cf8c5d9cec8510758.jpg'
+        // },
+        // subtitle: {
+        //     tracks: [
+        //         {
+        //             url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_3.vtt',
+        //             name: 'eng',
+        //         },
+        //         {
+        //             url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/extracted_subtitle_from_stream_4.vtt',
+        //             name: 'eng(forced)',
+        //         },
+        //     ],
+        //     type: 'webvtt',
+        //     fontSize: '25px',
+        //     bottom: '10%',
+        //     color: '#6677cc'
+        // },
+        // audio: {
+        //     tracks: [
+        //         {
+        //             url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_1.aac',
+        //             name: 'English',
+        //         },
+        //         {
+        //             url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_2.aac',
+        //             name: 'Japanese',
+        //         },
+        //     ],
+        // },
+        // danmaku: {
+        //     id: '9E2E3368B56CDBB4',
+        //     api: 'https://api.prprpr.me/dplayer/',
+        //     addition: ['https://s-sh-17-dplayercdn.oss.dogecdn.com/1678963.json']
+        // }
     });
 
     const events = [
