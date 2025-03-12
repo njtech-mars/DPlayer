@@ -27,6 +27,10 @@ module.exports = {
     resolve: {
         modules: ['node_modules'],
         extensions: ['.js', '.less'],
+        alias: {
+            'art-template': path.resolve(__dirname, '../../node_modules/.pnpm/art-template@4.13.2/node_modules/art-template'),
+        },
+        preferRelative: true,
         fallback: {
             dgram: false,
             fs: false,
