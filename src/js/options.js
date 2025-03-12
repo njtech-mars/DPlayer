@@ -59,11 +59,11 @@ export default (options) => {
         },
         {
             key: 'about-author',
-            link: 'https://diygod.me',
+            link: 'https://studio.online.njtech.edu.cn/',
         },
         {
             text: `DPlayer v${DPLAYER_VERSION}`,
-            link: 'https://github.com/MoePlayer/DPlayer',
+            link: 'https://github.com/njtech-mars/DPlayer',
         },
     ]);
 

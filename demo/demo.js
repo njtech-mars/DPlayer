@@ -40,37 +40,34 @@ function initPlayers() {
     window.dp1 = new DPlayer({
         container: document.getElementById('dplayer1'),
         preload: 'none',
-        screenshot: true,
+        // screenshot: true,
         video: {
-            url: 'https://data2online.njtech.edu.cn/media/anime/动漫/星灵感应 (2023)/Season 1/星灵感应 - S01E07 - 1080p - BDRIP - X265 - FLAC.mkv',
+            url: 'https://data2online.njtech.edu.cn/media/movie/外语电影/2018/环太平洋：雷霆再起 (2018)/环太平洋：雷霆再起 (2018) - 1080p - BluRay - X264 - AC3.mkv',
         },
         subtitle: {
             tracks: [
                 {
-                    url: 'https://data2online.njtech.edu.cn/media/anime/%E5%8A%A8%E6%BC%AB/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20(2023)/Season%201/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20-%20S01E07%20-%201080p%20-%20BDRIP%20-%20X265%20-%20FLAC_extracted_subtitle_from_stream_2.vtt',
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%A4%96%E8%AF%AD%E7%94%B5%E5%BD%B1/2018/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)%20-%201080p%20-%20BluRay%20-%20X264%20-%20AC3_extracted_subtitle_from_stream_2.vtt',
                     name: 'CHS',
                 },
                 {
-                    url: 'https://data2online.njtech.edu.cn/media/anime/%E5%8A%A8%E6%BC%AB/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20(2023)/Season%201/%E6%98%9F%E7%81%B5%E6%84%9F%E5%BA%94%20-%20S01E07%20-%201080p%20-%20BDRIP%20-%20X265%20-%20FLAC_extracted_subtitle_from_stream_3.vtt',
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%A4%96%E8%AF%AD%E7%94%B5%E5%BD%B1/2018/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)%20-%201080p%20-%20BluRay%20-%20X264%20-%20AC3_extracted_subtitle_from_stream_3.vtt',
                     name: 'CHT',
                 },
             ],
             type: 'webvtt',
-            fontSize: '25px',
+            fontSize: '2vw',
             bottom: '10%',
             color: '#6677cc'
         },
         audio: {
             tracks: [
                 {
-                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_1.aac',
+                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%A4%96%E8%AF%AD%E7%94%B5%E5%BD%B1/2018/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)/%E7%8E%AF%E5%A4%AA%E5%B9%B3%E6%B4%8B%EF%BC%9A%E9%9B%B7%E9%9C%86%E5%86%8D%E8%B5%B7%20(2018)%20-%201080p%20-%20BluRay%20-%20X264%20-%20AC3_transcoded_audio_from_stream_1.mp3',
                     name: 'English',
                 },
-                {
-                    url: 'https://data2online.njtech.edu.cn/media/movie/%E5%8A%A8%E7%94%BB%E7%94%B5%E5%BD%B1/2023/%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F%20(2023)/transcoded_audio_from_stream_2.aac',
-                    name: 'Japanese',
-                },
             ],
+            defdefaultAudio: 0 // 自动选择第一个音轨
         },
         // video: {
         //     url: 'https://data2online.njtech.edu.cn/media/movie/动画电影/2023/你想活出怎样的人生 (2023)/你想活出怎样的人生 (2023) - 1080p - WEB-DL - H264 - DDP 5.1 Atmos.mkv',

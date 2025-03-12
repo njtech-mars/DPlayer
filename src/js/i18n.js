@@ -124,6 +124,7 @@ const tranTxt = {
         'about-dplayer': '关于 DPlayer 播放器',
         loop: '洗脑循环',
         speed: '速度',
+        douleSpeed: '▶▶▶倍速播放中',
         'opacity-danmaku': '弹幕透明度',
         normal: '正常',
         'please-input-danmaku': '要输入弹幕内容啊喂！',

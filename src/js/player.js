@@ -45,6 +45,7 @@ class DPlayer {
         this.user = new User(this);
         this.container = this.options.container;
         this.noticeList = {};
+        this.initLongPressEvents();
 
         this.container.classList.add('dplayer');
         if (!this.options.danmaku) {
@@ -111,6 +112,10 @@ class DPlayer {
                         // defaultAudio is int, directly use for index
                         this.options.audio.index = this.options.audio.defaultAudio;
                     }
+                }
+                // defaultAudio not match or not exist or index bound(when defaultAudio is int), use first
+                if (this.options.audio.index === -1 || !this.options.audio.index || this.options.audio.index > this.options.audio.tracks.length - 1) {
+                    this.options.audio.index = 0;
                 }
             }
         }
@@ -217,7 +222,6 @@ class DPlayer {
         } else if (this.video.currentTime > time) {
             this.notice(`${this.tran('rew').replace('%s', (this.video.currentTime - time).toFixed(0))}`);
         }
-
         this.video.currentTime = time;
 
         if (this.danmaku) {
@@ -327,6 +331,37 @@ class DPlayer {
         }
 
         return this.video.volume;
+    }
+
+    // 监听手机端长按事件
+    initLongPressEvents() {
+        this.longPressTimer = null;
+        this.isLongPressActive = false;
+        const LONG_PRESS_DURATION = 500;
+
+        this.container.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 1) return;
+            this.longPressTimer = setTimeout(() => {
+                this.isLongPressActive = true;
+                this.speed(2);
+            }, LONG_PRESS_DURATION);
+        });
+
+        this.container.addEventListener('touchend', () => {
+            clearTimeout(this.longPressTimer);
+            if (this.isLongPressActive) {
+                this.isLongPressActive = false;
+                this.speed(1);
+            }
+        });
+
+        this.container.addEventListener('touchcancel', () => {
+            clearTimeout(this.longPressTimer);
+            if (this.isLongPressActive) {
+                this.isLongPressActive = false;
+                this.speed(1);
+            }
+        });
     }
 
     /**
