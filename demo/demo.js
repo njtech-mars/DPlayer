@@ -39,11 +39,29 @@ function initPlayers() {
     // dp1
     window.dp1 = new DPlayer({
         container: document.getElementById('dplayer1'),
+        autoplay: true,
         preload: 'none',
         // screenshot: true,
         video: {
-            url: 'https://data2online.njtech.edu.cn/media/movie/外语电影/2018/环太平洋：雷霆再起 (2018)/环太平洋：雷霆再起 (2018) - 1080p - BluRay - X264 - AC3.mkv',
+            url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/10.mp4',
         },
+        episodes: [
+            {id: '66d0731a997ebcc654a0bfd4', index: 1, title: '第1集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/1.mp4'},
+            {id: '66d0731a997ebcc654a0bfd5', index: 2, title: '第2集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/2.mp4'},
+            {id: '66d0731a997ebcc654a0bfd6', index: 3, title: '第3集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/3.mp4'},
+            {id: '66d0731a997ebcc654a0bfd7', index: 4, title: '第4集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/4.mp4'},
+            {id: '66d0731a997ebcc654a0bfd8', index: 5, title: '第5集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/5.mp4'},
+            {id: '66d0731a997ebcc654a0bfd9', index: 6, title: '第6集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/6.mp4'},
+            {id: '66d0731a997ebcc654a0bfda', index: 7, title: '第7集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/7.mp4'},
+            {id: '66d0731a997ebcc654a0bfdb', index: 8, title: '第8集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/8.mp4'},
+            {id: '66d0731a997ebcc654a0bfdc', index: 9, title: '第9集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/9.mp4'}, 
+            {id: '66d0731a997ebcc654a0bfdd', index: 10, title: '第10集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/10.mp4'},
+            {id: '66d0731a997ebcc654a0bfde', index: 11, title: '第11集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/11.mp4'},
+            {id: '66d0731a997ebcc654a0bfdf', index: 12, title: '第12集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/12.mp4'},
+            {id: '66d0731a997ebcc654a0bfe0', index: 13, title: '第13集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/13.mp4'},
+            {id: '66d0731a997ebcc654a0bfe1', index: 14, title: '第14集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/14.mp4'},
+            {id: '66d0731a997ebcc654a0bfe2', index: 15, title: '第15集', url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/15.mp4'},
+],
         subtitle: {
             tracks: [
                 {

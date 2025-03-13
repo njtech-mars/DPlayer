@@ -103,9 +103,9 @@
             <button class="dplayer-icon dplayer-quality-icon">{{ options.video.quality[options.video.defaultQuality].name }}</button>
             <div class="dplayer-quality-mask">
                 <div class="dplayer-quality-list">
-                {{ each options.video.quality }}
+                    {{ each options.video.quality }}
                     <div class="dplayer-quality-item" data-index="{{ $index }}">{{ $value.name }}</div>
-                {{ /each }}
+                    {{ /each }}
                 </div>
             </div>
         </div>
@@ -130,6 +130,22 @@
                 <span class="dplayer-icon-content">{{@ icons.comment }}</span>
             </button>
         </div>
+        {{ if options.episodes }}
+        <div class="dplayer-episodes">
+            <button class="dplayer-icon dplayer-episodes-icon" data-balloon="{{ tran('episodes') }}" data-balloon-pos="up">
+                <span class="dplayer-icon-content">{{@ icons.episodes }}</span>
+            </button>
+            <div class="dplayer-episodes-box">
+                <div class="dplayer-episodes-panel">
+                    {{ each options.episodes }}
+                    <button class="dplayer-episodes-item" data-episode="{{ $value.url }}">
+                        <span class="dplayer-label">{{ $value.index }}</span>
+                    </button>
+                    {{ /each }}
+                </div>
+            </div>
+        </div>
+        {{ /if }}
         {{ if options.subtitle }}
         <div class="dplayer-subtitles">
             <button class="dplayer-icon dplayer-subtitles-icon" data-balloon="{{ tran('subtitle') }}" data-balloon-pos="up">
@@ -138,10 +154,9 @@
             <div class="dplayer-subtitles-box">
                 <div class="dplayer-subtitles-panel">
                     {{ each options.subtitle.tracks }}
-                        <div class="dplayer-subtitles-item" data-subtitle="{{ $value.url }}">
-                            <!-- if lang, show tran(lang). if lang and name, show name + (tran(lang)). if name, show name. off option use lang for translation. -->
-                            <span class="dplayer-label">{{ $value.name }}</span>
-                        </div>
+                    <div class="dplayer-subtitles-item" data-subtitle="{{ $value.url }}">
+                        <span class="dplayer-label">{{ $value.name }}</span>
+                    </div>
                     {{ /each }}
                 </div>
             </div>
@@ -155,10 +170,9 @@
             <div class="dplayer-audios-box">
                 <div class="dplayer-audios-panel">
                     {{ each options.audio.tracks }}
-                        <button class="dplayer-audios-item" data-audio="{{ $value.url }}">
-                            <!-- if lang, show tran(lang). if lang and name, show name + (tran(lang)). if name, show name. off option use lang for translation. -->
-                            <span class="dplayer-label">{{ $value.name }}</span>
-                        </button>
+                    <button class="dplayer-audios-item" data-audio="{{ $value.url }}">
+                        <span class="dplayer-label">{{ $value.name }}</span>
+                    </button>
                     {{ /each }}
                 </div>
             </div>
@@ -208,9 +222,9 @@
                 </div>
                 <div class="dplayer-setting-speed-panel">
                     {{ each options.playbackSpeed }}
-                        <div class="dplayer-setting-speed-item" data-speed="{{ $value }}">
-                            <span class="dplayer-label">{{ $value === 1 ? tran('normal') : $value }}</span>
-                        </div>
+                    <div class="dplayer-setting-speed-item" data-speed="{{ $value }}">
+                        <span class="dplayer-label">{{ $value === 1 ? tran('normal') : $value }}</span>
+                    </div>
                     {{ /each }}
                 </div>
             </div>
@@ -278,9 +292,9 @@
 </div>
 <div class="dplayer-menu">
     {{ each options.contextmenu }}
-        <div class="dplayer-menu-item">
-            <a{{ if $value.link }} target="_blank"{{ /if }} href="{{ $value.link || 'javascript:void(0);' }}">{{ if $value.key }} {{ tran($value.key) }}{{ /if }}{{ if $value.text }} {{$value.text}}{{ /if }}</a>
-        </div>
+    <div class="dplayer-menu-item">
+        <a{{ if $value.link }} target="_blank"{{ /if }} href="{{ $value.link || 'javascript:void(0);' }}">{{ if $value.key }} {{ tran($value.key) }}{{ /if }}{{ if $value.text }} {{$value.text}}{{ /if }}</a>
+    </div>
     {{ /each }}
 </div>
 <div class="dplayer-notice-list"></div>

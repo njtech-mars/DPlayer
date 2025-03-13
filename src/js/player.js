@@ -12,6 +12,7 @@ import User from './user';
 import Subtitle from './subtitle';
 import Subtitles from './subtitles';
 import Audios from './audios';
+import Episodes from './episodes';
 import Bar from './bar';
 import Timer from './timer';
 import Bezel from './bezel';
@@ -137,6 +138,10 @@ class DPlayer {
 
         this.controller = new Controller(this);
 
+        if (this.options.episodes) {
+            this.episodes = new Episodes(this);
+        }
+
         if (this.options.danmaku) {
             this.danmaku = new Danmaku({
                 player: this,
@@ -146,7 +151,6 @@ class DPlayer {
                     setTimeout(() => {
                         this.template.danmakuLoading.style.display = 'none';
 
-                        // autoplay
                         if (this.options.autoplay) {
                             this.play();
                         }

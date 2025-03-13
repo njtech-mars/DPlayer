@@ -28,6 +28,7 @@ class Template {
                 url: this.options.video.url,
                 subtitle: this.options.subtitle,
                 audio: this.options.audio,
+                episodes: this.options.episodes,
             },
         });
 
@@ -93,6 +94,9 @@ class Template {
         this.audiosItem = this.container.querySelectorAll('.dplayer-audios-item');
         this.subtitle = this.container.querySelector('.dplayer-subtitle');
         this.subtrack = this.container.querySelector('.dplayer-subtrack');
+        this.episodesButton = this.container.querySelector('.dplayer-episodes-icon');
+        this.episodesBox = this.container.querySelector('.dplayer-episodes-box');
+        this.episodesItem = this.container.querySelectorAll('.dplayer-episodes-item');
         this.qualityButton = this.container.querySelector('.dplayer-quality-icon');
         this.barPreview = this.container.querySelector('.dplayer-bar-preview');
         this.barWrap = this.container.querySelector('.dplayer-bar-wrap');

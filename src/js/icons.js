@@ -17,6 +17,7 @@ import subtitle from '../assets/subtitle.svg';
 import audio from '../assets/audio.svg';
 import loading from '../assets/loading.svg';
 import chromecast from '../assets/chromecast.svg';
+import episodes from '../assets/episodes.svg';
 
 const Icons = {
     play: play,
@@ -35,6 +36,7 @@ const Icons = {
     camera: camera,
     subtitle: subtitle,
     audio: audio,
+    episodes: episodes,
     loading: loading,
     airplay: airplay,
     chromecast: chromecast,
