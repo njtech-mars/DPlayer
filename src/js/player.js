@@ -46,7 +46,6 @@ class DPlayer {
         this.user = new User(this);
         this.container = this.options.container;
         this.noticeList = {};
-        this.initLongPressEvents();
 
         this.container.classList.add('dplayer');
         if (!this.options.danmaku) {
@@ -335,37 +334,6 @@ class DPlayer {
         }
 
         return this.video.volume;
-    }
-
-    // 监听手机端长按事件
-    initLongPressEvents() {
-        this.longPressTimer = null;
-        this.isLongPressActive = false;
-        const LONG_PRESS_DURATION = 500;
-
-        this.container.addEventListener('touchstart', (e) => {
-            if (e.touches.length > 1) return;
-            this.longPressTimer = setTimeout(() => {
-                this.isLongPressActive = true;
-                this.speed(2);
-            }, LONG_PRESS_DURATION);
-        });
-
-        this.container.addEventListener('touchend', () => {
-            clearTimeout(this.longPressTimer);
-            if (this.isLongPressActive) {
-                this.isLongPressActive = false;
-                this.speed(1);
-            }
-        });
-
-        this.container.addEventListener('touchcancel', () => {
-            clearTimeout(this.longPressTimer);
-            if (this.isLongPressActive) {
-                this.isLongPressActive = false;
-                this.speed(1);
-            }
-        });
     }
 
     /**

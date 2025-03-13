@@ -738,14 +738,18 @@
 }
 
 .dplayer-episodes-box {
-    width: 200px;
+    display: flex;
+    width: 260px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #555 #2e2c2c;
     position: absolute;
     bottom: 55px;
     right: 0;
     background: #2e2c2c;
-    padding: 3px;
+    padding: 2px;
     border-radius: 4px;
-    z-index: 2;
     opacity: 0; /* 初始透明度为 0 */
     transform: translateY(10px); /* 初始向下偏移 10px */
     visibility: hidden; /* 初始隐藏 */
@@ -755,8 +759,21 @@
         visibility 0.3s ease; /* 添加过渡效果 */
 }
 
+.dplayer-episodes-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dplayer-episodes-box::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.dplayer-episodes-box::-webkit-scrollbar-track {
+    background: #2e2c2c;
+}
+
 .dplayer-episodes-box-show {
-    opacity: 1; /* 完全显示 */
+    opacity: 1;
     transform: translateY(0); /* 取消偏移 */
     visibility: visible; /* 显示 */
 }
@@ -772,7 +789,7 @@
     padding: 0;
     margin: 3px;
     cursor: pointer;
-    border: 1px solid #fff;
+    border: 1.5px solid #fff;
     border-radius: 4px;
     box-sizing: border-box;
     transition:
@@ -786,10 +803,10 @@
 }
 
 .dplayer-episodes-item-current {
-    background-color: #007bff; /* 蓝色背景 */
-    border-color: #007bff; /* 蓝色边框 */
-    color: #fff; /* 白色字体 */
+    background-color: #007bff;
+    border: 1.5px solid #007bff;
 }
+
 .dplayer-mobile-play {
     display: none;
     width: 50px;
