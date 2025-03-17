@@ -43,6 +43,10 @@ class FullScreen {
             document.addEventListener('msfullscreenchange', this.docfullscreenchange);
             document.addEventListener('MSFullscreenChange', this.docfullscreenchange);
         }
+
+        this.player.container.addEventListener('dblclick', () => {
+            this.toggle('browser');
+        });
     }
 
     isFullScreen(type = 'browser') {
@@ -133,6 +137,10 @@ class FullScreen {
             document.removeEventListener('msfullscreenchange', this.docfullscreenchange);
             document.removeEventListener('MSFullscreenChange', this.docfullscreenchange);
         }
+
+        this.player.container.removeEventListener('dblclick', () => {
+            this.toggle('browser');
+        });
     }
 }
 
