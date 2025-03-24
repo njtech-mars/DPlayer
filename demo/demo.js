@@ -42,6 +42,7 @@ function initPlayers() {
         autoplay: true,
         preload: 'none',
         // screenshot: true,
+        marsToken:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiTkpURUNIIl0sImV4cCI6Mzg4MDQ1NjI3MiwiaWF0IjoxNzMyOTcyNjI1LCJpc3MiOiJNQVJTIiwicmxlIjoiYWRtaW4iLCJzdWIiOiIyMDIyMjEwMTkwODEiLCJ1aWQiOiI2NmQwNzJmNzk5N2ViY2M2NTRhMDJjMDcifQ.LZ7EjuEFc_EozjHZbnD9jjOLiY9g9TsB8T_ZqORWXAQ",
         video: {
             url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/10.mp4',
         },
@@ -50,445 +51,46 @@ function initPlayers() {
               "id": "66d0731a997ebcc654a0bfd4",
               "index": 1,
               "title": "第1集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/1.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfd5",
               "index": 2,
               "title": "第2集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/2.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfd6",
               "index": 3,
               "title": "第3集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/3.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfd7",
               "index": 4,
               "title": "第4集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/4.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfd8",
               "index": 5,
               "title": "第5集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/5.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfd9",
               "index": 6,
               "title": "第6集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/6.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfda",
               "index": 7,
               "title": "第7集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/7.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfdb",
               "index": 8,
               "title": "第8集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/8.mp4"
             },
             {
               "id": "66d0731a997ebcc654a0bfdc",
               "index": 9,
               "title": "第9集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/9.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfdd",
-              "index": 10,
-              "title": "第10集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/10.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfde",
-              "index": 11,
-              "title": "第11集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/11.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfdf",
-              "index": 12,
-              "title": "第12集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/12.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe0",
-              "index": 13,
-              "title": "第13集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/13.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe1",
-              "index": 14,
-              "title": "第14集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/14.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe2",
-              "index": 15,
-              "title": "第15集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/15.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe3",
-              "index": 16,
-              "title": "第16集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/16.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe4",
-              "index": 17,
-              "title": "第17集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/19.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe5",
-              "index": 18,
-              "title": "第18集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/20.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe6",
-              "index": 19,
-              "title": "第19集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/21.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe7",
-              "index": 20,
-              "title": "第20集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/22.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe8",
-              "index": 21,
-              "title": "第21集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/23.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfe9",
-              "index": 22,
-              "title": "第22集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/24.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfea",
-              "index": 23,
-              "title": "第23集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/25.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfeb",
-              "index": 24,
-              "title": "第24集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/26.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfec",
-              "index": 25,
-              "title": "第25集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/27.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfed",
-              "index": 26,
-              "title": "第26集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/28.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfee",
-              "index": 27,
-              "title": "第27集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/29.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfef",
-              "index": 28,
-              "title": "第28集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/30.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff0",
-              "index": 29,
-              "title": "第29集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/31.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff1",
-              "index": 30,
-              "title": "第30集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/32.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff2",
-              "index": 31,
-              "title": "第31集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/33.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff3",
-              "index": 32,
-              "title": "第32集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/34.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff4",
-              "index": 33,
-              "title": "第33集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/35.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff5",
-              "index": 34,
-              "title": "第34集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/36.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff6",
-              "index": 35,
-              "title": "第35集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/37.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff7",
-              "index": 36,
-              "title": "第36集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/38.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff8",
-              "index": 37,
-              "title": "第37集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/39.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bff9",
-              "index": 38,
-              "title": "第38集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/40.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bffa",
-              "index": 39,
-              "title": "第39集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/41.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bffb",
-              "index": 40,
-              "title": "第40集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/42.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bffc",
-              "index": 41,
-              "title": "第41集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/43.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bffd",
-              "index": 42,
-              "title": "第42集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/44.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bffe",
-              "index": 43,
-              "title": "第43集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/45.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0bfff",
-              "index": 44,
-              "title": "第44集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/46.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c000",
-              "index": 45,
-              "title": "第45集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/47.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c001",
-              "index": 46,
-              "title": "第46集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/48.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c002",
-              "index": 47,
-              "title": "第47集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/49.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c003",
-              "index": 48,
-              "title": "第48集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/50.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c004",
-              "index": 49,
-              "title": "第49集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/51.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c005",
-              "index": 50,
-              "title": "第50集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/52.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c006",
-              "index": 51,
-              "title": "第51集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/53.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c007",
-              "index": 52,
-              "title": "第52集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/54.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c008",
-              "index": 53,
-              "title": "第53集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/55.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c009",
-              "index": 54,
-              "title": "第54集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/56.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00a",
-              "index": 55,
-              "title": "第55集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/57.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00b",
-              "index": 56,
-              "title": "第56集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/58.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00c",
-              "index": 57,
-              "title": "第57集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/59.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00d",
-              "index": 58,
-              "title": "第58集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/60.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00e",
-              "index": 59,
-              "title": "第59集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/61.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c00f",
-              "index": 60,
-              "title": "第60集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/62.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c010",
-              "index": 61,
-              "title": "第61集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/63.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c011",
-              "index": 62,
-              "title": "第62集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/64.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c012",
-              "index": 63,
-              "title": "第63集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/65.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c013",
-              "index": 64,
-              "title": "第64集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/66.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c014",
-              "index": 65,
-              "title": "第65集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/67.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c015",
-              "index": 66,
-              "title": "第66集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/68.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c016",
-              "index": 67,
-              "title": "第67集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/69.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c017",
-              "index": 68,
-              "title": "第68集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/70.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c018",
-              "index": 69,
-              "title": "第69集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/71.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c019",
-              "index": 70,
-              "title": "第70集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/72.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c01a",
-              "index": 71,
-              "title": "第71集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/73.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c01b",
-              "index": 72,
-              "title": "第72集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/74.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c01c",
-              "index": 73,
-              "title": "第73集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/75.mp4"
-            },
-            {
-              "id": "66d0731a997ebcc654a0c01d",
-              "index": 74,
-              "title": "第74集",
-              "url": "https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/76.mp4"
             }
           ]
         // subtitle: {
