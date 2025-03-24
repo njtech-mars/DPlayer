@@ -138,7 +138,7 @@
             <div class="dplayer-episodes-box">
                 <div class="dplayer-episodes-panel">
                     {{ each options.episodes }}
-                    <button class="dplayer-episodes-item" data-episode="{{ $value.url }}">
+                    <button class="dplayer-episodes-item" data-episode-id="{{ $value.id }}" data-index="{{ $value.index }}">
                         <span class="dplayer-label">{{ $value.index }}</span>
                     </button>
                     {{ /each }}

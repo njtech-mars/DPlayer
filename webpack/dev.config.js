@@ -94,6 +94,14 @@ module.exports = {
         },
         compress: true,
         open: true,
+        proxy: {
+            '/api/v2': {
+                target: 'https://dev.online.njtech.edu.cn',
+                changeOrigin: true,
+                pathRewrite: { '^/api/v2': '/api/v2' },
+                secure: false,
+            },
+        },
     },
 
     plugins: [

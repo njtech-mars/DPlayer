@@ -42,6 +42,7 @@ function initPlayers() {
         autoplay: true,
         preload: 'none',
         // screenshot: true,
+        marsToken:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiTkpURUNIIl0sImV4cCI6Mzg4MDQ1NjI3MiwiaWF0IjoxNzMyOTcyNjI1LCJpc3MiOiJNQVJTIiwicmxlIjoiYWRtaW4iLCJzdWIiOiIyMDIyMjEwMTkwODEiLCJ1aWQiOiI2NmQwNzJmNzk5N2ViY2M2NTRhMDJjMDcifQ.LZ7EjuEFc_EozjHZbnD9jjOLiY9g9TsB8T_ZqORWXAQ",
         video: {
             url: 'https://data2online.njtech.edu.cn/online-2020-2/2023-12-26/甄嬛传/10.mp4',
         },

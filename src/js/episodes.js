@@ -17,6 +17,29 @@ export default class Episodes {
         }
     }
 
+    async fetchEpisodeUrl(episodeId) {
+        try {
+            const response = await fetch(`/api/v2/video_episodes/${episodeId}`, {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json, application/problem+json',
+                    Authorization: `Bearer ${this.player.options.marsToken}`,
+                },
+                credentials: 'include',
+            });
+
+            if (!response.ok) {
+                throw new Error(`请求失败: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data.url;
+        } catch (error) {
+            console.error('获取视频地址失败:', error);
+            throw error;
+        }
+    }
+
     bindEvents() {
         this.episodesButton.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -24,15 +47,26 @@ export default class Episodes {
         });
 
         this.episodesItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                const episodeUrl = item.getAttribute('data-episode');
-                this.player.switchVideo({ url: episodeUrl });
-                this.episodesBox.classList.remove('dplayer-episodes-box-show');
+            item.addEventListener('click', async () => {
+                const episodeId = item.dataset.episodeId;
+                if (!episodeId) return;
 
-                this.currentEpisodeIndex = index;
-                this.updateCurrentEpisodeStyle();
+                try {
+                    const videoUrl = await this.fetchEpisodeUrl(episodeId);
 
-                this.player.play();
+                    this.player.switchVideo({
+                        url: videoUrl,
+                    });
+
+                    this.currentEpisodeIndex = index;
+                    this.updateCurrentEpisodeStyle();
+
+                    this.player.play();
+                } catch (error) {
+                    console.error('切换剧集失败:', error);
+                } finally {
+                    this.episodesBox.classList.remove('dplayer-episodes-box-show');
+                }
             });
         });
 
@@ -43,11 +77,7 @@ export default class Episodes {
 
     updateCurrentEpisodeStyle() {
         this.episodesItems.forEach((item, index) => {
-            if (index === this.currentEpisodeIndex) {
-                item.classList.add('dplayer-episodes-item-current');
-            } else {
-                item.classList.remove('dplayer-episodes-item-current');
-            }
+            item.classList.toggle('dplayer-episodes-item-current', index === this.currentEpisodeIndex);
         });
     }
 }
